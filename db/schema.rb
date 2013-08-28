@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130821171755) do
+ActiveRecord::Schema.define(version: 20130827190726) do
+
+  create_table "gears", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "brand"
+    t.string   "component"
+    t.float    "daily_rental_price"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gears", ["user_id"], name: "index_gears_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

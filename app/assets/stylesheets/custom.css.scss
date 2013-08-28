@@ -124,6 +124,33 @@ input {
   }
 }
 
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.title {
+  display: block;
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
 /* logo 
 #logo {
   float: left;

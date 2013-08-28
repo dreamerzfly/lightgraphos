@@ -1,9 +1,19 @@
-<div class="center hero-unit">
-  <h1>Welcome to CLYQE</h1>
+<% if signed_in? %>
+  <div class="center hero-unit">
+    <h1>Welcome to CLYQE</h1>
 
-  <h2>
-  	A Community Marketplace for Photographers
-  </h2>
+    <h2>
+      A Community Marketplace for Photographers
+    </h2>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to CLYQE</h1>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
+    <h2>
+      A Community Marketplace for Photographers
+    </h2>
+
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>

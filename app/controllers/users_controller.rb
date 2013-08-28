@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   
   def show
   	@user = User.find(params[:id])
+    @gears = @user.gears.paginate(page: params[:page]) 
+    #to be able to show gear on the user pages. also need to add paginate to gemfile
   end
 
   def new
@@ -42,13 +44,6 @@ class UsersController < ApplicationController
     end
 
     # Before filters
-
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "please sign in."
-      end
-    end
 
     def correct_user
       @user = User.find(params[:id])

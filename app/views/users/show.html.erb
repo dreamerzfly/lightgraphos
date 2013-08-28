@@ -1,3 +1,20 @@
 <% provide(:title, @user.name) %>
-<h1>Welcome</h1>
-<h2><%= @user.name %>, <%= @user.email %></h2>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <%= link_to "Post gear", postgear_path, class: "btn btn-default btn-primary" %>
+  </aside>
+  <div class="span8">
+    <% if @user.gears.any? %>
+      <h3>Gear (<%= @user.gears.count %>)</h3>
+      <ol class="gears">
+        <%= render @gears %>
+      </ol>
+      <%= will_paginate @gears %>
+    <% end %>
+  </div>
+</div>

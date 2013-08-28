@@ -1,14 +1,19 @@
 Lightgraphos::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  #get "static_pages/home"
+  resources :gears, only: [:new, :create, :destroy]
+  #get "users/new"
+  #get "gears/new"
   root  'static_pages#home'
+  match '/postgear', to: 'gears#new', via: 'get' #postgear_path
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match 'signout', to: 'sessions#destroy', via: 'delete'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/blog', to: 'static_pages#blog', via: 'get'
+  #delete this - match '/usershow', to: 'users#show', via: 'get'
+  #get "static_pages/home"  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
