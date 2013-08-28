@@ -8,13 +8,9 @@
     </section>
     <%= link_to "Post gear", postgear_path, class: "btn btn-default btn-primary" %>
   </aside>
+  <!-- delete above and change span from 4 to 8 -->
   <div class="span8">
-    <% if @user.gears.any? %>
-      <h3>Gear (<%= @user.gears.count %>)</h3>
-      <ol class="gears">
-        <%= render @gears %>
-      </ol>
-      <%= will_paginate @gears %>
-    <% end %>
-  </div>
+      <h3>Gear List</h3>
+      <%= render 'shared/posts' %>
+    </div>
 </div>

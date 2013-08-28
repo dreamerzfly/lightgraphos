@@ -1,0 +1,26 @@
+<% provide(:title, "Gear Info") %>
+<h1>Gear info for <%= @gear.title %></h1>
+
+<div class="row">
+  <div class="span3">
+  	<h5>Brand</h5>
+  	<p><%= @gear.brand %></p>
+  </div>
+
+  <div class="span3">
+  	<h5>Component</h5>
+  	<p><%= @gear.component %></p>
+  </div>
+
+  <div class="span3">
+  	<h5>Daily Rental Price</h5>
+  	<p><%= @gear.daily_rental_price %></p>
+  </div>
+
+  <div class="span3">
+  	<h5>Description</h5>
+  	<p><%= @gear.description %></p>
+  </div>
+</div>
+
+<%= link_to "Go to profile", current_user, class: "btn btn-default btn-primary" %>

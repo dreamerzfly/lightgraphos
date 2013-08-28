@@ -12,8 +12,13 @@ class GearsController < ApplicationController
   		flash[:success] = "Gear posted!"
   		redirect_to current_user #redirects to current users profile page
   	else
+      @posts_items = []
   		render 'new' #renders the post gear page but should display error messages if any
   	end
+  end
+
+  def show
+    @gear = current_user.gears.find(params[:id]) #add code
   end
 
   private

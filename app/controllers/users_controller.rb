@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     @gears = @user.gears.paginate(page: params[:page]) 
     #to be able to show gear on the user pages. also need to add paginate to gemfile
+    @posts_items = current_user.posts.paginate(page: params[:page])
   end
 
   def new

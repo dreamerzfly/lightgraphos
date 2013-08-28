@@ -1,7 +1,7 @@
 Lightgraphos::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :gears, only: [:new, :create, :destroy]
+  resources :gears, only: [:new, :create, :destroy, :show]
   #get "users/new"
   #get "gears/new"
   root  'static_pages#home'
