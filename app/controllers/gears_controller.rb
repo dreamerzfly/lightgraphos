@@ -1,8 +1,14 @@
 class GearsController < ApplicationController
 	before_action :signed_in_user
+  before_action :correct_user,   only: :destroy
 
   def new
   	@gear = current_user.gears.build()
+  end
+
+  def destroy
+    @gear.destroy
+    redirect_to current_user
   end
 
   def create
@@ -27,5 +33,10 @@ class GearsController < ApplicationController
   	def gear_params
   		params.require(:gear).permit(:title, :brand, :component, :daily_rental_price, :description)
   	end
+
+    def correct_user
+      @gear = current_user.gears.find_by(id: params[:id])
+      redirect_to current_user if @gear.nil?
+    end
 
 end
