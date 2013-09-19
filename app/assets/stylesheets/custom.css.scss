@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
+/* mixins, variables, etc. for debug box*/
 
 $grayMediumLight: #eaeaea;
 
@@ -169,4 +169,11 @@ aside {
   text-decoration: none;
 }
 */
+
+.brand
+{
+  background: url(CLYQE_logo_000.png) no-repeat left center;
+  height: 25px;
+  width: 100px;
+}
 
