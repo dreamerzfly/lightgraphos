@@ -1,39 +1,29 @@
 <% if signed_in? %>
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="hero-unit">
-          <h1><p>Welcome to CLYQE</p></h1>
-          <p>A Community Marketplace for Photographers</p>
-        </div>
-      </div>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <h1><p>Welcome to</p></h1>
+      <p><%= link_to image_tag("CLYQE_logo_vertical.png", alt: "CLYQE"), '/' %></p>
+      <h2>A Community Marketplace for Photographers</h2>
     </div>
   </div>
 <% else %>
 
-  <div class="hero-unit">
-    <p><%= link_to image_tag("CLYQE_logo_vertical.png", alt: "CLYQE"), '#' %></p>
-    <p>A Community Marketplace for Photographers</p>
-    <p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-success" %></p>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <p><%= link_to image_tag("CLYQE_logo_vertical.png", alt: "CLYQE"), '/' %></p>
+      <h2>A Community Marketplace for Photographers</h2>
+      <p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-success" %></p>
+    </div>
   </div>
 
   <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="hero-unit">
-          <p><%= link_to image_tag("CLYQE_logo_vertical.png", alt: "CLYQE"), '#' %></p>
-          <p>A Community Marketplace for Photographers</p>
-          <p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-success" %></p>
-        </div>
-      </div>
-    </div>
 
     <div class="row-fluid">
       <div class="span12">
         <div class="hero-unit">
-          <h2>
+          <h3>
             Make Money
-          </h2>
+          </h3>
           <p>
             Do you have too much gear that you don't use all the time?
           </p>
@@ -43,7 +33,7 @@
           </p>
           
           <p>
-            CLYQE allows you to make money by renting out your gear to other photographers
+            <%= link_to image_tag("CLYQE_logo_000.png"), '/' %> allows you to make money by renting out your gear to other photographers
           </p>
         </div>
       </div>
@@ -64,7 +54,7 @@
           </p>
           
           <p>
-            CLYQE allows you to save money by renting gear from other photographers
+            <%= link_to image_tag("CLYQE_logo_000.png"), '/' %> allows you to save money by renting gear from other photographers
           </p>
         </div>
       </div>
@@ -84,7 +74,7 @@
           </p>
           
           <p>
-            CLYQE provides a community where photographers of different experience can help each other out
+            <%= link_to image_tag("CLYQE_logo_000.png"), '/' %> provides a community where photographers of different experience can help each other
           </p>
         </div>
       </div>
