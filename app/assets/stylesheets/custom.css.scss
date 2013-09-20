@@ -151,7 +151,7 @@ aside {
   }
 }
 
-/* logo 
+/* header */ 
 #logo {
   float: left;
   margin-right: 10px;
@@ -168,12 +168,16 @@ aside {
   color: #fff;
   text-decoration: none;
 }
-*/
 
-.brand
-{
-  background: url(CLYQE_logo_000.png) no-repeat left center;
-  height: 25px;
-  width: 100px;
+
+/*.brand {*/
+.navbar .brand {
+  float:none;
+  background: no-repeat left center;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0px;
+  width: 0px;
+  line-height: 1;
 }
 
