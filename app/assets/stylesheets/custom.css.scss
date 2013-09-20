@@ -169,6 +169,11 @@ aside {
   text-decoration: none;
 }
 
+.hero-unit {
+  /*background-image: url(image_path('CLYQE_logo_venn.png'));*/
+  background-color: rgba(0, 0, 0, 0);
+}
+
 
 /*.brand {*/
 .navbar .brand {
@@ -180,4 +185,3 @@ aside {
   width: 0px;
   line-height: 1;
 }
-

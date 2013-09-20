@@ -1,17 +1,24 @@
+<% provide(:title, 'Home') %>
+
 <% if signed_in? %>
-  <div class="jumbotron">
-    <div class="container-fluid">
-      <h1><p>Welcome to</p></h1>
-      <p><%= link_to image_tag("CLYQE_logo_vertical.png", alt: "CLYQE"), '/' %></p>
-      <h2>A Community Marketplace for Photographers</h2>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <h1><p>Welcome to</p></h1>
+        <p><%= image_tag("CLYQE_logo_vertical_home.png", alt: "CLYQE") %></p>
+        <div class="btn-group btn-group-vertical">
+          <%= link_to "Search for gear to rent", '#', class: "btn btn-large btn-success" %>
+          <%= link_to "Post gear", postgear_path, class: "btn btn-default btn-success" %>
+        </div>
+      </div>
     </div>
   </div>
-<% else %>
 
+<% else %>
   <div class="jumbotron">
     <div class="container-fluid">
-      <p><%= link_to image_tag("CLYQE_logo_vertical.png", alt: "CLYQE"), '/' %></p>
-      <h2>A Community Marketplace for Photographers</h2>
+       <h1>A Community Marketplace for Photographers</h1>     
+      <p><%= image_tag("CLYQE_logo_vertical_home.png", alt: "CLYQE") %></p>
       <p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-success" %></p>
     </div>
   </div>
@@ -20,6 +27,8 @@
 
     <div class="row-fluid">
       <div class="span12">
+        <div class="page-header">
+        </div>
         <div class="hero-unit">
           <h3>
             Make Money
@@ -33,7 +42,7 @@
           </p>
           
           <p>
-            <%= link_to image_tag("CLYQE_logo_000.png"), '/' %> allows you to make money by renting out your gear to other photographers
+            <%= image_tag("CLYQE_logo_000.png") %> allows you to make money by renting out your gear to other photographers
           </p>
         </div>
       </div>
@@ -41,10 +50,12 @@
 
     <div class="row-fluid">
       <div class="span12">
+        <div class="page-header">
+        </div>
         <div class="hero-unit">
-          <h2>
+          <h3>
             Save Money
-          </h2>
+          </h3>
           <p>
             Do you need gear for an assignment or project
           </p>
@@ -54,17 +65,20 @@
           </p>
           
           <p>
-            <%= link_to image_tag("CLYQE_logo_000.png"), '/' %> allows you to save money by renting gear from other photographers
+            <%= image_tag("CLYQE_logo_000.png") %> allows you to save money by renting gear from other photographers
           </p>
         </div>
       </div>
     </div>
+
     <div class="row-fluid">
       <div class="span12">
+        <div class="page-header">
+        </div>
         <div class="hero-unit">
-          <h2>
+          <h3>
             Community
-          </h2>
+          </h3>
           <p>
             Do you want tips on how to take better pictures
           </p>
@@ -74,10 +88,11 @@
           </p>
           
           <p>
-            <%= link_to image_tag("CLYQE_logo_000.png"), '/' %> provides a community where photographers of different experience can help each other
+            <%= image_tag("CLYQE_logo_000.png") %> provides a community where photographers of different experience can help each other
           </p>
         </div>
       </div>
     </div>
+
   </div>
 <% end %>
