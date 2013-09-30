@@ -27,6 +27,10 @@ class GearsController < ApplicationController
     @gear = current_user.gears.find(params[:id]) #add code
   end
 
+  def searchgear
+    @gears = Gear.search(params[:search])
+  end
+
   private
 
   	# this code enables requirements of paraments in the post gear form

@@ -1,0 +1,20 @@
+<% provide(:title, "Post Gear") %>
+<h1>Post Gear</h1>
+<form class="form-search">
+	<input type="text" class="span3 search-query" placeholder="Search gear"/>
+	<button class="btn">Search</button>
+</form>
+
+<%= form_tag gears_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", :name => nil %>
+	</p>
+<% end %>
+
+<% if not @gears.blank?  %>
+	<% @gears.each do |gear| %>
+	  <%= gear.title %>
+
+	<% end %>
+<% end %>
