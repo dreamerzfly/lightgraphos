@@ -6,10 +6,8 @@
       <div class="span12">
         <h1><p>Welcome to</p></h1>
         <p><%= image_tag("CLYQE_logo_vertical_home.png", alt: "CLYQE") %></p>
-        <div class="btn-group btn-group-vertical">
-          <%= link_to "Search for gear to rent", searchgear_path, class: "btn btn-large btn-success" %>
-          <%= link_to "Post gear", postgear_path, class: "btn btn-default btn-success" %>
-        </div>
+        <p><%= link_to "Search for gear to rent", searchgear_path, class: "btn btn-large btn-success" %></p>
+        <p><%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %></p>
       </div>
     </div>
   </div>
@@ -44,6 +42,8 @@
           <p>
             <%= image_tag("CLYQE_logo_000.png") %> allows you to make money by renting out your gear to other photographers
           </p>
+
+          <%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %>
         </div>
       </div>
     </div>
@@ -67,6 +67,9 @@
           <p>
             <%= image_tag("CLYQE_logo_000.png") %> allows you to save money by renting gear from other photographers
           </p>
+
+          <p><%= link_to "Search for gear to rent", searchgear_path, class: "btn btn-large btn-success" %></p>
+
         </div>
       </div>
     </div>
@@ -90,6 +93,8 @@
           <p>
             <%= image_tag("CLYQE_logo_000.png") %> provides a community where photographers of different experience can help each other
           </p>
+
+          <%= link_to "Learn more", "#", class: "btn btn-large btn-success" %>
         </div>
       </div>
     </div>

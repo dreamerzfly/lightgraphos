@@ -1,20 +1,25 @@
-<% provide(:title, "Post Gear") %>
-<h1>Post Gear</h1>
+<% provide(:title, "Search Gear") %>
+<h1>Search Gear</h1>
+
+<!--
 <form class="form-search">
 	<input type="text" class="span3 search-query" placeholder="Search gear"/>
 	<button class="btn">Search</button>
 </form>
+-->
 
 <%= form_tag gears_path, :method => 'get' do %>
 	<p>
+		<!--1st parameter is the parameter name, the 2nd param params[:search] is the value shown on the page after clicking submit-->
 		<%= text_field_tag :search, params[:search] %>
+		<!--:name => nil  means name of the submit_tag will not show up on the url -->
 		<%= submit_tag "Search", :name => nil %>
 	</p>
 <% end %>
 
 <% if not @gears.blank?  %>
 	<% @gears.each do |gear| %>
-	  <%= gear.title %>
+	  <p><%= gear.title %></p>
 
 	<% end %>
 <% end %>
