@@ -1,0 +1,22 @@
+<% provide(:title, "Search Gear") %>
+<h1>Search Gear</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@search) do |f| %>
+
+      <%= f.label :brand %>
+      <%= f.select :brand, [ "Canon", "Nikon", "Sigma", "Panasonic", "Leica", "Olympus", "Fujifilm", "Mamiya", "Minolta", "Bower", "GoPro", "Sanyo", "Ricoh", "Pentax", " Lytro" ], :prompt => 'Select Brand'%>
+
+      <%= f.label :component %>
+      <%= f.select :component, [ "Body", "Lens", "Accessory" ], :prompt => 'Select Component' %>
+
+      <%= f.label :min_price, "Price Range" %>
+      min <%= f.text_field :min_price, size: 10 %>
+      max <%= f.text_field :max_price, size: 10 %>
+
+      <%= f.submit "Search gear now!", class: "btn btn-default btn-success" %>
+    <% end %>
+
+  </div>
+</div>

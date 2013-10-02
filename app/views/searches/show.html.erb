@@ -1,0 +1,8 @@
+
+<% provide(:title, "Search Results") %>
+<h1>Search Results</h1>
+
+
+<%= render @search.gears %>
+
+<%= link_to "Search gear again", new_search_path, class: "btn btn-default btn-success" %>

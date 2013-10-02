@@ -2,6 +2,7 @@ Lightgraphos::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :gears, only: [:new, :create, :destroy, :show]
+  resources :searches
   #get "users/new"
   #get "gears/new"
   root  'static_pages#home'
@@ -12,8 +13,8 @@ Lightgraphos::Application.routes.draw do
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/blog', to: 'static_pages#blog', via: 'get'
-  match '/searchgear', to: 'gears#searchgear', via: 'get'
-  match '/gears', to: 'gears#searchgear', via: 'get'
+  #match '/searchgear', to: 'gears#searchgear', via: 'get'
+  #match '/gears', to: 'gears#searchgear', via: 'get'
   #delete this - match '/usershow', to: 'users#show', via: 'get'
   #get "static_pages/home"  
   # The priority is based upon order of creation: first created -> highest priority.
