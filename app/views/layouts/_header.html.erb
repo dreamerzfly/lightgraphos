@@ -1,11 +1,9 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
-      <%= link_to image_tag("CLYQE_logo_venn_logo.png"), '/', id: "logo" %>
-      <nav>
-        <ul class="nav nav-pills pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Blog", blog_path %></li>          
+    <div class="container container-full-width page-container">
+      <%= link_to image_tag("CLYQE_logo.png"), '/', id: "logo" %>
+      <!--<nav> -->
+        <ul class="nav nav-pills pull-right">         
           <li><%= link_to "About", about_path %></li>
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
@@ -23,9 +21,10 @@
             </li>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
+            <li><%= link_to "", class: "icon-user" %></li>
           <% end %>
         </ul>
-      </nav>
+      <!--</nav>-->
     </div>
   </div>
 </header>
