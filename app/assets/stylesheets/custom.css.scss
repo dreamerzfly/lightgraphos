@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 
 /* mixins, variables, etc. for debug box*/
 
@@ -17,7 +18,8 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  height: 900px;
+  width: 1440px;
 }
 
 section {
@@ -182,8 +184,7 @@ aside {
 
 .container-full-width {
   width: auto;
-  min-width: 1440px;
-  margin: 0 25px;
+  min-width: 1401px;
 }
 
 .page-container {
@@ -196,45 +197,52 @@ aside {
 
 
 /*.brand {*/
-.navbar .brand {
-  float:none;
-  background: no-repeat left center;
+#header .navbar{
   padding-top: 0;
   padding-bottom: 0;
-  height: 30px;
+  height: 60px;
   width: 30px;
   line-height: 1;
+  position: fixed;
 }
 
-.navbar {
-  height: 60px;
-}
-
-.navbar .nav > li > a {
+.header-item li > a {
     text-decoration: none;
     text-shadow:none !important;
-    color: white;
+    color: white !important;
   }
 
-.navbar-inner {
+#header .navbar-inner {
   background-color: #4679bd; 
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
   height: 40px;
+  border-bottom-width: 0px;
 }
 
 /* Background */
-.fixed-bg .front-bg {
-  position: fixed;
+.jumbotron {
+  background-color:transparent;
+  background-image:url(image_path('CLYQE_home_bg.jpg'));
+  background-repeat:no-repeat;
+  background-size: auto auto;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 613px;
+  width: 100%;
 }
 
-.front-bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: black;
+.search-area-home {
+  z-index: 160;
+  position: absolute;
   top: 0;
+  height: 300px;
+  padding-top: 200px;
+  padding-left: 400px;
+  color: #E6E6E6;
 }
 
 
