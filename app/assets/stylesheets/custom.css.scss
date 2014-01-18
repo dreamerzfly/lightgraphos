@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 
 /* mixins, variables, etc. for debug box*/
 
@@ -17,7 +18,8 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  height: 900px;
+  width: 1440px;
 }
 
 section {
@@ -159,13 +161,19 @@ aside {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  text-align: center;
+  vertical-align: middle;
   font-weight: bold;
   line-height: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 50px;
+  width: 70px;
+  position: absolute;
 }
 
 #logo:hover {
-  color: #fff;
+  color: #555;
   text-decoration: none;
 }
 
@@ -174,14 +182,76 @@ aside {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.container-full-width {
+  width: auto;
+  min-width: 1401px;
+}
+
+.page-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 1045px;
+}
+
 
 /*.brand {*/
-.navbar .brand {
-  float:none;
-  background: no-repeat left center;
+#header .navbar{
   padding-top: 0;
   padding-bottom: 0;
-  height: 0px;
-  width: 0px;
+  height: 60px;
+  width: 30px;
   line-height: 1;
+  position: fixed;
 }
+
+.header-item li > a {
+    text-decoration: none;
+    text-shadow:none !important;
+    color: white !important;
+  }
+
+#header .navbar-inner {
+  background-color: #4679bd; 
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+  height: 40px;
+  border-bottom-width: 0px;
+}
+
+.header-item .dropdown-menu {
+  background-color: #4679bd;
+}
+
+/* Background */
+.jumbotron {
+  background-color:transparent;
+  background-image:url(image_path('CLYQE_home_bg.jpg'));
+  background-repeat:no-repeat;
+  background-size: auto auto;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 613px;
+  width: 100%;
+}
+
+.search-area-home {
+  z-index: 160;
+  position: absolute;
+  top: 0;
+  height: 300px;
+  padding-top: 200px;
+  padding-left: 400px;
+  color: #E6E6E6;
+}
+
+.content-area-home {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
