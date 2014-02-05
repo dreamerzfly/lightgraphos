@@ -13,6 +13,7 @@ Lightgraphos::Application.routes.draw do
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/blog', to: 'static_pages#blog', via: 'get'
+  match '/make_money', to: 'static_pages#reason_one', via: 'get'
   #match '/searchgear', to: 'gears#searchgear', via: 'get'
   #match '/gears', to: 'gears#searchgear', via: 'get'
   #delete this - match '/usershow', to: 'users#show', via: 'get'

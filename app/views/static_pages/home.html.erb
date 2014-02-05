@@ -1,36 +1,45 @@
 <% provide(:title, 'Home') %>
 
-<div class="jumbotron">
-  <div class="container container-full-width container-fluid">
-    <div class="search-area-home">
-      <%if signed_in? %>
-        <h1><p>Welcome to CLYQE</p></h1>
-        <p><%= link_to "Search for gear to rent", new_search_path, class: "btn btn-large btn-success" %></p>
-        <p><%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %></p>
-      <%else %>
-        <h2>ClyQe is a place for you to</h2>
-        <h4>list gears, rent gears, and learn from each other.</h4>     
-        <p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-success" %></p>
-    </div>
+<div class="content">
+  <header>
+    <div class="card row">
+      <div class="copy_container offset-by-five">
+        <%if signed_in? %> 
+          <h1><p>Welcome to CLYQE</p></h1>
+          <p><%= link_to "Search for gear to rent", new_search_path, class: "btn btn-large btn-success" %></p>
+          <p><%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %></p>
+        <%else %>
+          <h1>A PLACE FOR YOU TO</h1>
+          <h4>list gears, rent gears, and learn from each other.</h4>  
+          <p>Whether you are looking for a gear on your trips or you are looking to rent out your gears, ClyQe is here to connect photographers around the world.</p> 
+          <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
+          <div class="input-group">
+            <input type="text" class="form-control subscribe-bar" placeholder="Email Address">
+            <span class="input-group-btn">
+              <!--<button class="btn btn-default" type="button">Sign Up!</button>-->
+              <%= link_to "Sign up now!", signup_path, class: "btn btn-success" %>
+            </span>
+            
+          </div>
+        <% end%>
+      </div>
   </div>
 </div>
 
-<div class="container-fluid content-area-home">
+<div class="container content-area-home">
   <div class="span4">
     <h3>Make Money</h3>
     <p>Gears are not cheap. Renting out your unused gears could pay your new gears, or fund your next projects. </p>
-    <p><%= link_to "Click here to learn how" %></p>
+    <!--<p><%= link_to "Click here to learn how", make_money_path%></p>-->
   </div>
   <div class="span4">
     <h3>Convenience!</h3>
     <p>Save the hassle of carrying your gears to/from your destinations. Rent with a flexible schedule from your fellow photographers!</p> 
-    <p><%= link_to "Learn to learn more"%></p>
+    <!--<p><%= link_to "Learn to learn more"%></p>-->
   </div>
   <div class="span4">
     <h3>Community</h3>
     <p>Learn from your fellow photographers on gear tips, photography tips, and destination tips. </p>
-    <%= link_to "Click here to learn more"%>
+    <!--<%= link_to "Click here to learn more"%>-->
   </div>
 </div>
-
-<% end %>

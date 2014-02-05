@@ -17,11 +17,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  height: 900px;
-  width: 1440px;
-}
-
 section {
   overflow: auto;
 }
@@ -56,7 +51,7 @@ footer a:hover {
 }
 
 footer small {
-  float: left;
+  float: right;
 }
 
 footer ul {
@@ -182,11 +177,6 @@ aside {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.container-full-width {
-  width: auto;
-  min-width: 1401px;
-}
-
 .page-container {
   margin-left: auto;
   margin-right: auto;
@@ -226,32 +216,91 @@ aside {
 }
 
 /* Background */
-.jumbotron {
-  background-color:transparent;
+.content {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 2.0;
+}
+
+.content > header {
   background-image:url(image_path('CLYQE_home_bg.jpg'));
-  background-repeat:no-repeat;
-  background-size: auto auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1px;
+  padding-top: 150px;
+  padding-right: 40px;
+  overflow: hidden;
   position: relative;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  height: 613px;
+  background-color:  #3b96cf;
+  color: #fff;
+  padding-bottom: 24px;
   width: 100%;
+  z-index: 10;
 }
 
-.search-area-home {
-  z-index: 160;
-  position: absolute;
-  top: 0;
-  height: 300px;
-  padding-top: 200px;
-  padding-left: 400px;
-  color: #E6E6E6;
+.content > header .card {
+  margin-bottom: 60px; 
 }
 
-.content-area-home {
-  padding-left: 100px;
-  padding-right: 100px;
+.row {
+  width: 960px;
+  max-width: 100%;
+  min-height: 500px;
+  margin: 0 auto;
 }
 
+.content > header .copy_container {
+  background: rgba(0, 0, 0, 0.65);
+  width: 68%;
+  padding: 24px;
+}
+
+.row .offset-by-five {
+  margin-left: 33.333%;
+}
+
+.container .span4 {
+  width: 350px !important;
+}
+
+.content > header .copy_container h1 {
+  font-size: 3.50em;
+  line-height: 65px;
+  padding-bottom: 15px;
+}
+
+.content > header .copy_container h4 {
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  color: #FCFFFD;
+  font-size: 1.5em;
+}
+
+.content > header .copy_container p {
+  font-size: .9em;
+}
+
+.subscribe-bar {
+  width: 400px;
+}
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+.input-group-btn, .input-group .form-control {
+  display: table-cell;
+}
+
+.input-group .form-control {
+  margin-bottom: 0;
+}
+
+.add-padding {
+  padding-top: 30px;
+}
 
