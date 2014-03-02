@@ -3,6 +3,7 @@ class SubscribersController < ApplicationController
 	def create
 		@subscriber = Subscriber.new(subscriber_params)
 		@subscriber.save
+		flash[:success] = "Welcome to CLYQE!"
 		redirect_to home_path
 	end
 
