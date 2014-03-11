@@ -1,8 +1,15 @@
 Lightgraphos::Application.routes.draw do
+  devise_for :visitors
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :gears, only: [:new, :create, :destroy, :show]
   resources :searches
+
+  devise_scope :visitors do 
+    get '/signup' => 'devise/registrations#new'
+    #new_visitor_registration GET    /visitors/sign_up(.:format)       devise/registrations#new
+  end
+
   #get "users/new"
   #get "gears/new"
   root  'static_pages#home'
