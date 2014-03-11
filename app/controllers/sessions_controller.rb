@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
 
 	def new
+		flash[:success] = "Welcome to CLYQE!"
+		redirect_to root_url
 	end
 
 	def create
