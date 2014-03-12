@@ -8,19 +8,24 @@
           <h1><p>Welcome to CLYQE</p></h1>
           <p><%= link_to "Search for gear to rent", new_search_path, class: "btn btn-large btn-success" %></p>
           <p><%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %></p>
+       
         <%else %>
           <h1>A PLACE FOR YOU TO</h1>
           <h4>list gears, rent gears, and learn from each other.</h4>  
           <p>Whether you are looking for a gear on your trips or you are looking to rent out your gears, ClyQe is here to connect photographers around the world.</p> 
           <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
+
+          <p><%= link_to "Clyqe to Sign Up!", new_visitor_registration_path, :class => "btn btn-large btn-success"%> </p>
+
+          <!--
           <div class="input-group">
             <input type="text" class="form-control subscribe-bar" placeholder="Email Address">
             <span class="input-group-btn">
-              <!--<button class="btn btn-default" type="button">Sign Up!</button>-->
               <%= link_to "Sign up now!", signup_path, class: "btn btn-success" %>
             </span>
-            
+          -->
           </div>
+          
         <% end%>
       </div>
   </div>

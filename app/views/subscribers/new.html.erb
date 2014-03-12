@@ -1,0 +1,48 @@
+<% provide(:title, 'Subscribe') %>
+<h1>Subscribe</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@subscriber) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :email1 %>
+      <%= f.text_field :email %>
+      <%= f.submit "Create my account", class: "btn btn-large btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@subscriber) do |f| %>
+      <%= f.label :email1 %>
+      <%= f.text_field :email %>
+      <%= f.submit "Create my account", class: "btn btn-large btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="span6 offset3">
+
+    <div class="input-group">
+      <input type="text" class="form-control subscribe-bar" placeholder="Email Address 3">
+      <span class="input-group-btn">
+        <!--<button class="btn btn-default" type="button">Sign Up!</button>-->
+        <%= link_to "Sign up now!", signup_path, class: "btn btn-success" %>
+      </span>
+    </div> 
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <% form_tag(signup_path, :method => "get") do %>
+    <% label_tag(:q, "Search for:") %>
+    <% text_field_tag(:q) %>
+    <% submit_tag("Search") %>
+    <% end %>
+  </div>
+</div>
