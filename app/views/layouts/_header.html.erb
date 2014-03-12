@@ -4,31 +4,7 @@
       <%= link_to image_tag("CLYQE_logo.png"), '/', id: "logo" %>
       <!--<nav> -->
         <ul class="nav nav-pills pull-right header-item">        
-          <li id="fat-menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> About <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "About ClyQe", about_path%></li>
-              <li><a href="#">The Team</a></li>
-            </ul>
-          </li>
-          <% if signed_in? %>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
-          <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-            <li><%= link_to "", class: "icon-user" %></li>
-          <% end %>
+          <li><%= link_to "About Us", about_path%></li>
         </ul>
       <!--</nav>-->
     </div>
