@@ -8,4 +8,16 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+  def resource_name
+    :visitor
+  end
+
+  def resource
+    @resource ||= Visitor.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:visitor]
+  end
 end
