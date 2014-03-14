@@ -15,6 +15,7 @@
           <p>Whether you are looking for a gear on your trips or you are looking to rent out your gears, ClyQe is here to connect photographers around the world.</p> 
           <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
 
+          <!--this is for getting email input and confirming email using devise-->
           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
             <%= f.label :email %>
