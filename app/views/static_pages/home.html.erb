@@ -15,6 +15,7 @@
           <p>Whether you are looking for a gear on your trips or you are looking to rent out your gears, ClyQe is here to connect photographers around the world.</p> 
           <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
 
+          <!--this is for getting email input and confirming email using devise-->
           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
             <%= f.label :email %>
@@ -38,20 +39,25 @@
   </div>
 </div>
 
-<div class="container content-area-home">
-  <div class="span4">
-    <h3>Make Money</h3>
-    <p>Gears are not cheap. Renting out your unused gears could pay your new gears, or fund your next projects. </p>
+<div id="content-area-home" class="container">
+  <div class="span4 span4-gray">
+    <h3>MAKE MONEY</h3>
+    <%= image_tag("make_money/make_money_1.png") %>
+    <p>Majority of people use their gears less than 150 days out of a year. ClyQe allows you to gain profits from unused gears. Rent out your gears when you don't need them, and keep them when you do. </p>
     <!--<p><%= link_to "Click here to learn how", make_money_path%></p>-->
   </div>
-  <div class="span4">
-    <h3>Convenience!</h3>
-    <p>Save the hassle of carrying your gears to/from your destinations. Rent with a flexible schedule from your fellow photographers!</p> 
+  <div class="span4 span4-gray-2">
+    <h3>CONVENIENCE</h3>
+    <%= image_tag("conv_1.png") %>
+    <p>No more paying rental fee for the length of your travel. ClyQe gives you a way to rent with flexible schedule and location. Rent a gear when you need one, and save money on the day that you don't. </p> 
+    <p></p>
     <!--<p><%= link_to "Learn to learn more"%></p>-->
   </div>
-  <div class="span4">
-    <h3>Community</h3>
-    <p>Learn from your fellow photographers on gear tips, photography tips, and destination tips. </p>
+  <div class="span4 span4-gray">
+    <h3>COMMUNITY</h3>
+    <%= image_tag("community_1.png") %>
+    <p>Whether you are gear owners or renters, ClyQe is a place to make friends. Learn from your fellow photographers on tips about gears, techniques, and destination.</p>
+    &nbsp
     <!--<%= link_to "Click here to learn more"%>-->
   </div>
 </div>

@@ -9,6 +9,7 @@ module ApplicationHelper
     end
   end
 
+  #helper methods to use form_for througout app to call devise resources
   def resource_name
     :visitor
   end
