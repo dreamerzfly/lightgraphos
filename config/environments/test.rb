@@ -37,5 +37,7 @@ Lightgraphos::Application.configure do
   #speed up tests by lowering bcrypt's cost function.
   ActiveModel::SecurePassword.min_cost = true
 
-  config.action_mailer.default_url_options = { :host => 'clyqe-staging.herokuapp.com' }
+  #config.action_mailer.default_url_options = { :host => 'clyqe-staging.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => ENV['ACTION_MAILER_TEST_URL'] }
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 end
