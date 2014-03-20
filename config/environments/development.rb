@@ -40,4 +40,5 @@ Lightgraphos::Application.configure do
   config.action_mailer.default_options = {from: 'no-replay@example.com'}
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 end

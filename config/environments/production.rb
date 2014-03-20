@@ -97,4 +97,5 @@ Lightgraphos::Application.configure do
 
   #config.action_mailer.default_url_options = { :host => 'clyqe.herokuapp.com' }
   config.action_mailer.default_url_options = { :host => ENV['ACTION_MAILER_PROD_URL'] }
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 end
