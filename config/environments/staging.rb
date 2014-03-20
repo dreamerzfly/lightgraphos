@@ -95,6 +95,6 @@ Lightgraphos::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_options = {from: 'no-replay@example.com'}
 
-  #for prod heroku
-  config.action_mailer.default_url_options = { :host => 'clyqe-staging.herokuapp.com' }
+  #config.action_mailer.default_url_options = { :host => 'clyqe-staging.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => ENV['ACTION_MAILER_STAGING_URL'] }
 end
