@@ -103,7 +103,7 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  width: 250px;
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
@@ -195,6 +195,11 @@ aside {
   line-height: 1;
   position: fixed;
 }
+
+.navbar-fixed-top{
+  position: absolute !important;
+}
+
 
 .header-item li > a {
     text-decoration: none;

@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
 
 	def new
-		flash[:success] = "Welcome to CLYQE!"
+		flash[:suc] = "Thanks for your interest! More updates to come on the way"
 		redirect_to root_url
+
 	end
+
 
 	def create
 		user = User.find_by(email: params[:session][:email].downcase)
