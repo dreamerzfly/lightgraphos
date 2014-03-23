@@ -84,16 +84,15 @@ Lightgraphos::Application.configure do
   config.assets.debug = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    #domain:               'example.com',
-    user_name:            'graphoslight@gmail.com',
-    password:             'lightgraphos',
+    address:              'smtpout.secureserver.net',
+    port:                 80,
+    domain:               'clyqe.com',
+    user_name:            'info@clyqe.com',
+    password:             'tmvDumas10',
     authentication:       'plain',
     enable_starttls_auto: true  }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'no-replay@example.com'}
 
   #config.action_mailer.default_url_options = { :host => 'clyqe-staging.herokuapp.com' }
   config.action_mailer.default_url_options = { :host => ENV['ACTION_MAILER_STAGING_URL'] }
