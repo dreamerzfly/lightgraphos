@@ -12,6 +12,11 @@ $grayMediumLight: #eaeaea;
 }
 
 /* universal */
+body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 
 html {
   overflow-y: scroll;
@@ -279,7 +284,7 @@ aside {
   font-size: 1.5em;
 }
 
-.content > header .copy_container p {
+.content > header .container p {
   font-size: .9em;
 }
 
@@ -312,6 +317,14 @@ aside {
   background: #E3EFFF;
   padding: 10px 10px 10px 10px;
 }
+
+@media (min-width: 767px)
+{
+  #content-area-home .span4 {
+    width: 30%; 
+  }
+}
+
 .subscribe-bar {
   width: 400px;
 }
@@ -386,5 +399,10 @@ aside {
   font-size: 13px;
   margin: 10px 10px;
   text-transform: uppercase;
+}
+
+#visitor_email {
+  min-width: 500px;
+  margin-bottom: 0px;
 }
 
