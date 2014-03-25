@@ -27,12 +27,19 @@ Lightgraphos::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtpout.secureserver.net',
-    port:                 80,
+    port:                 3535,
     domain:               'www.clyqe.com',
     user_name:            'info@clyqe.com',
     password:             'tmvDumas10',
     authentication:       'plain',
     enable_starttls_auto: true  }
+    #address:              'smtp.sendgrid.net',
+    #port:                 587,
+    #domain:               'www.clyqe.com',
+    #user_name:            'graphoslight',
+    #password:             'tmvDumas10',
+    #authentication:       'plain',
+    #enable_starttls_auto: true  }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   #config.action_mailer.default_options = {from: 'no-replay@example.com'}
