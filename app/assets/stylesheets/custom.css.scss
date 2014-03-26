@@ -264,6 +264,8 @@ aside {
   background: rgba(0, 0, 0, 0.65);
   width: 68%;
   padding: 24px;
+  margin-left: auto; /*center the copy_container*/
+  margin-right: auto;
 }
 
 .row .offset-by-five {
@@ -294,7 +296,10 @@ aside {
 }
 
 #content-area-home {
-  /*padding: 0px 20px 44px 80px;*/
+  /*padding: 0px 100px 40px 100px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10px;
 }
 
@@ -309,19 +314,21 @@ aside {
 #content-area-home .span4-gray {
   background: #F0F1F2;
   margin-left: 0px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 17px 10px 17px;
 }
 
 #content-area-home .span4-gray-2 {
   margin-left: 0px;
   background: #E3EFFF;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 17px 10px 17px;
 }
 
 @media (min-width: 767px)
 {
   #content-area-home .span4 {
     width: 30%; 
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -402,7 +409,7 @@ aside {
 }
 
 #visitor_email {
-  min-width: 500px;
+  min-width: 100px;
   margin-bottom: 0px;
 }
 
