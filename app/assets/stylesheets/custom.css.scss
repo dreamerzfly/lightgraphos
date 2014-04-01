@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import "bootstrap-responsive";
 
 /* mixins, variables, etc. for debug box*/
 
@@ -84,7 +83,7 @@ footer ul li {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid $gray-lighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -157,6 +156,8 @@ aside {
 #logo {
   float: left;
   margin-right: 10px;
+  margin-top: 10-px;
+  margin-bottom: 10px;
   font-size: 1.7em;
   color: #fff;
   text-transform: uppercase;
@@ -169,12 +170,18 @@ aside {
   padding-bottom: 5px;
   height: 50px;
   width: 70px;
-  position: absolute;
+  position: relative;
+  z-index: 5;
 }
 
 #logo:hover {
   color: #555;
   text-decoration: none;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-unit {
@@ -195,8 +202,7 @@ aside {
 #header .navbar{
   padding-top: 0;
   padding-bottom: 0;
-  height: 60px;
-  width: 30px;
+  height: auto;
   line-height: 1;
   position: fixed;
 }
@@ -210,15 +216,20 @@ aside {
     text-decoration: none;
     text-shadow:none !important;
     color: white !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    z-index: 500;
   }
 
-#header .navbar-inner {
-  background-color: #4679bd; 
+#header .navbar-inner { 
+  background-color: black;
+  opacity: 0.8;
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
-  height: 40px;
+  height: 60px;
   border-bottom-width: 0px;
+  z-index: 1000;
 }
 
 .header-item .dropdown-menu {
