@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import "bootstrap-responsive";
 
 /* mixins, variables, etc. for debug box*/
 
@@ -84,7 +83,7 @@ footer ul li {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid $gray-lighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -108,9 +107,12 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 250px;
+  width: 100px;
   padding: 10px;
   margin-bottom: 15px;
+  color: black;
+  font-size: 17px;
+  font-family: "ff-clan-web-pro-wide", sans-serif;
   @include box_sizing;
 }
 
@@ -118,6 +120,13 @@ input {
   height: auto !important;
 }
 
+/* override anything manually, like rounded buttons */
+.btn {
+  padding: 10px 8px;
+  color: #fff;
+  font-size: 17px;
+  font-family: "ff-clan-web-pro-wide", sans-serif;
+}
 #error_explanation {
   color: #f00;
   ul {
@@ -175,6 +184,11 @@ aside {
 #logo:hover {
   color: #555;
   text-decoration: none;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-unit {
@@ -276,7 +290,7 @@ aside {
   font-size: 3.50em;
   line-height: 65px;
   padding-bottom: 15px;
-}
+  }
 
 .content > header .copy_container h4 {
   border-bottom: 3px solid #ccc;
@@ -296,10 +310,7 @@ aside {
 }
 
 #content-area-home {
-  /*padding: 0px 100px 40px 100px;*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /*padding: 0px 20px 44px 80px;*/
   margin-bottom: 10px;
   float: center;
 }
@@ -315,13 +326,13 @@ aside {
 #content-area-home .span4-gray {
   background: #F0F1F2;
   margin-left: 0px;
-  padding: 10px 17px 10px 17px;
+  padding: 10px 10px 10px 10px;
 }
 
 #content-area-home .span4-gray-2 {
   margin-left: 0px;
   background: #E3EFFF;
-  padding: 10px 17px 10px 17px;
+  padding: 10px 10px 10px 10px;
 }
 
 @media all and (min-width: 767px)
@@ -408,7 +419,6 @@ aside {
 }
 
 #visitor_email {
-  min-width: 100px;
+  min-width: 400px;
   margin-bottom: 0px;
 }
-
