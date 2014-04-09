@@ -1,3 +1,8 @@
+$baseFontSize:          17px;
+$baseFontFamily:        'Crete Round', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$baseLineHeight:        20px;
+$altFontFamily:         'Open Sans Condensed', Georgia, "Times New Roman", Times, serif !default;
+
 @import "bootstrap";
 
 /* mixins, variables, etc. for debug box*/
@@ -290,6 +295,7 @@ aside {
   font-size: 3.50em;
   line-height: 65px;
   padding-bottom: 15px;
+  font-family: 'Crete Round';
   }
 
 .content > header .copy_container h4 {
@@ -298,6 +304,7 @@ aside {
   padding-bottom: 18px;
   color: #FCFFFD;
   font-size: 1.5em;
+  font-family: 'Crete Round';
 }
 
 .content > header .container p {
