@@ -1,3 +1,8 @@
+$baseFontSize: 17px;
+$baseFontfamily: 'Crete Round','Helvetica Neue',Helvetica,Arial,sans-serif !default;
+$baseLineHeight: 20px;
+$altFontFamily: 'Open Sans Condensed', Georgia, 'Times New Roman', Times, serif !default;
+
 @import "bootstrap";
 
 /* mixins, variables, etc. for debug box*/
@@ -42,8 +47,8 @@ textarea {
 footer {
   float: center;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
   color: #999;
+  height: 300px;
 }
 
 footer a {
@@ -107,14 +112,25 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 250px;
+  width: 100px;
   padding: 10px;
   margin-bottom: 15px;
+  color: black;
+  font-size: 17px;
+  font-family: "ff-clan-web-pro-wide", sans-serif;
   @include box_sizing;
 }
 
 input {
   height: auto !important;
+}
+
+/* Override anything manually, like rounded buttons */
+.btn {
+  padding: 10px 8px;
+  color: #fff;
+  font-size: 17px;
+  font-family: "ff-clan-web-pro-wide", sans-serif;
 }
 
 #error_explanation {
@@ -166,15 +182,15 @@ aside {
   vertical-align: middle;
   font-weight: bold;
   line-height: 1;
-  padding-top: 5px;
+  padding-top: 20px;
   padding-bottom: 5px;
   height: 50px;
-  width: 70px;
+  width: 130px;
   position: relative;
   z-index: 5;
 }
 
-#logo:hover {
+#logo:hover img {
   color: #555;
   text-decoration: none;
 }
@@ -216,7 +232,7 @@ aside {
     text-decoration: none;
     text-shadow:none !important;
     color: white !important;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     z-index: 500;
   }
@@ -227,7 +243,7 @@ aside {
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
-  height: 60px;
+  height: 80px;
   border-bottom-width: 0px;
   z-index: 1000;
 }
@@ -279,6 +295,7 @@ aside {
 
 .row .offset-by-five {
   margin-left: 33.333%;
+  font-family: 'Crete Round';
 }
 
 .content > header .copy_container h1 {
@@ -293,6 +310,7 @@ aside {
   padding-bottom: 18px;
   color: #FCFFFD;
   font-size: 1.5em;
+  font-family: 'Crete Round';
 }
 
 .content > header .container p {
@@ -302,20 +320,36 @@ aside {
 #about-area-home {
   background: #F0F1F2;
   margin-bottom: 10px;
+  margin-top: 50px;
 }
 
 #content-area-home {
   /*padding: 0px 20px 44px 80px;*/
   margin-bottom: 10px;
   float: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #content-area-home h3 {
   text-align: center;
+  font-weight: 400;
+  color: #e92429;
+  letter-spacing: 0.07em;
+}
+
+#content-area-home h2 {
+  float: left;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-bottom: 20px;
 }
 
 #content-area-home p {
   text-align: justify;
+  font-size: 17px;
+  color: gray;
+  padding-top: 50px;
 }
 
 #content-area-home .span4-gray {
@@ -328,6 +362,19 @@ aside {
   margin-left: 0px;
   background: #E3EFFF;
   padding: 10px 10px 10px 10px;
+}
+
+#content-area-home .thumbnail {
+  border: none;
+  background-color: transparent !important;
+}
+
+.color-me-gray {
+  background-color: #ededed;
+}
+
+.color-me-dark-gray {
+  background-color: $gray-dark;
 }
 
 @media all and (min-width: 767px)
@@ -414,7 +461,11 @@ aside {
 }
 
 #visitor_email {
-  min-width: 500px;
+  min-width: 400px;
   margin-bottom: 0px;
+}
+
+.add-padding-bottom {
+  padding-bottom: 40px;
 }
 

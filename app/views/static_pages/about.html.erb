@@ -1,8 +1,8 @@
 <% provide(:title, 'About Us') %>
 
-<div id="about-area-home" class="container container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
+<div id="about-area-home" class="container">
+	<div class="row">
+		<div class="col-md-12">
 			<div class="page-header">
 			</div>
 			<div class="hero-unit">
@@ -12,46 +12,58 @@
 				</p>
 				<hr width="75%">
 				<h2 align="center">The Team</h2>
-				<div class="row-fluid">
-					<h4>Mark Iglesias</h4>
-					<div class="span2">
-						<%= image_tag("profile/mark.png", :size => "100x100") %>
+
+				<div class="row">
+					<div class="col-md-2">
+						<h4>Mark Iglesias</h4>
 					</div>
-					<div class="span8">							
+				</div>
+				<div class="row add-padding-bottom">
+					<div class="col-md-2">
+							<%= image_tag("profile/mark.png", :size => "100x100") %>
+					</div>
+					<div class="col-md-10">							
 						<p>
-							Mark has been an avid photographer for over 10 years. His interest in photography started in high school. While preparing for a trip he spontaneously  bought a DSLR. That day changed his life and his wallet forever. Over time he acquired more lenses, changed camera bodies and purchased additional accessories. The amount of gear started to pile up. His wife was not pleased with the amount of time and money spent on this hobby which prompted him to sell most of his gear. He still misses all his old gear but is glad he has friends like Victor and Tiffanie that he can borrow from. Mark works in tech industry and has M.S in Software Engineering and MBA from San Jose State University.
+							Mark's story in Photography started when he spontaneously bought a DSLR while he was preparing for a trip. That day changed his life and wallet forever. The changes also caused him to acquire more lenses and more accessories. His wife was not pleased with the amount of time and money spend on this hobby, prompting him to sell most of his gears. He still misses his old gears, but is glad that he has friends like Victor and Tiffanie whom he can borrow from. He has been an avid photographer for over 10 years. Mark works in tech industry and has M.S. in Software Engineering, and M.B.A. from San Jose State University.
 						</p>
 					</div>
 				</div>
-				<div class="row-fluid">
-					<h4>Tiffanie Kong</h4>
-					<div class="span2">
+
+				<div class="row">
+					<div class="col-md-2">
+						<h4>Tiffanie Kong</h4>
+					</div>
+				</div>
+				<div class="row add-padding-bottom">
+					<div class="col-md-2">
 						<%= image_tag("profile/tiff.png", :size => "100x100") %>
 					</div>
-					<div class="span8">							
+					<div class="col-md-10">							
 						<p>
-							Tiffanie's passion for photography started when she experimented with her family's first digital camera. Travelling to beautiful places had inspired her to become a better photographer.  Bitten by the travel bug, she would never leave home without a camera.
-							
-							A few years later, she met Mark and Victor who helped to blossom her photography skills.The three began sharing camera equipment, photography and travel tips. Why not share their ideas, and tips with others? Then Clyqe was formed.
-
-							Tiffanie lives in the heart of silicon valley and is working in the high tech industry. She holds a B.S. in Computer Science from UC Davis and is pursuing her MBA in Marketing. 
+							Tiffanie's passion for Photography started when she experimented with her family's first digital camera. Travelling to beautiful places inspired her to become a better photographer.  Bitten by the travel bug, she would never leave home without a camera.
+							A few years later, she met Mark and Victor who helped to blossom her photography skills.The three began sharing camera gears, and Photography tips. Why not share their ideas, and tips with others? Then, Clyqe was formed.
+							Tiffanie lives in the heart of Silicon Valley and is working in the high tech industry. She holds a B.S. in Computer Science from UC Davis and is pursuing her MBA in Marketing. 
 						</p>
 					</div>
 				</div>
-				<div class="row-fluid">
-					<h4>Victor Sutan</h4>
-					<div class="span2">
+
+				<div class="row">
+					<div class="col-md-2">
+						<h4>Victor Sutan</h4>
+					</div>
+				</div>
+				<div class="row add-padding-bottom">
+					<div class="col-md-2">
 						<%= image_tag("profile/victor.png", :size => "100x100") %>
 					</div>
-					<div class="span8">							
+					<div class="col-md-10">							
 						<p>
-							Victor is usually out shooting, when he is not looking at binary numbers on his day job. Victor has photography experience of 8 years. He recently completed his cross country National Park adventure in 2 months. Victor has M.S. in Computer Engineering from Columbia University.
+							Victor is usually out shooting, when he is not looking at binary numbers on his day job. Victor has photography experience of over 8 years. He recently completed his cross country National Park adventure in 2 months. When he is not pushing his car to the limit, he usually volunteer for a local non-profit organization as the event photographer. Victor has M.S. in Computer Engineering from Columbia University.
 						</p>
 					</div>
 				</div>
 				<p><%= link_to "Back to the homepage", home_path %></p>
 			</div>
-
 		</div>
 	</div>
 </div>
