@@ -4,10 +4,12 @@
   <header>
     <div class="card row">
       <div class="copy_container">
-        <%if signed_in? %> 
+        <%if user_signed_in? %> 
           <h1><p>Welcome to CLYQE</p></h1>
           <p><%= link_to "Search for gear to rent", new_search_path, class: "btn btn-large btn-success" %></p>
           <p><%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %></p>
+          <p><%= link_to "Go to profile", current_user, class: "btn btn-default btn-success" %></p>
+          <p><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "btn btn-default btn-success" %></p>
        
         <%else %>
           <h1>A PLACE FOR YOU TO</h1>
@@ -16,6 +18,7 @@
           <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
 
           <!--this is for getting email input and confirming email using devise-->
+          <!--
           <%if flash[:suc]%>
             
             <div class="alert alert-info"><%= flash[:suc]%></div>
@@ -30,16 +33,19 @@
               <%= f.submit "Sign up", class: "btn btn-success"  %>
             <%end%>
           <% end %>
+        -->
 
           <!--<p><%= link_to "Clyqe to Sign Up!", new_visitor_registration_path, :class => "btn btn-large btn-success"%> </p>-->
 
-          <!--
           <div class="input-group">
             <input type="text" class="form-control subscribe-bar" placeholder="Email Address">
             <span class="input-group-btn">
               <%= link_to "Sign up now!", signup_path, class: "btn btn-success" %>
             </span>
-          -->
+          </div>
+          <div class="input-group">
+            <%= link_to('Login', new_user_session_path)  %> </br>
+            <%= render "devise/shared/links" %>
           </div>
           
         <% end%>

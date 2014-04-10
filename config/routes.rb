@@ -1,23 +1,24 @@
 Lightgraphos::Application.routes.draw do
+  devise_for :users
   devise_for :visitors
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  #resources :sessions, only: [:new, :create, :destroy]
   resources :gears, only: [:new, :create, :destroy, :show]
   resources :searches
 
-  devise_scope :visitors do 
-    get '/signup' => 'devise/registrations#new'
+  #devise_scope :visitors do 
+    #get '/signup' => 'devise/registrations#new'
     #new_visitor_registration GET    /visitors/sign_up(.:format)       devise/registrations#new
-  end
+  #end
 
   #get "users/new"
   #get "gears/new"
   root  'static_pages#home'
   match '/postgear', to: 'gears#new', via: 'get' #postgear_path
-  #match '/signup', to: 'users#new', via: 'get'
-  match '/signup', to: 'subscribers#new', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  #match '/signup', to: 'subscribers#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
-  match 'signout', to: 'sessions#destroy', via: 'delete'
+  #match 'signout', to: 'sessions#destroy', via: 'delete'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/blog', to: 'static_pages#blog', via: 'get'
