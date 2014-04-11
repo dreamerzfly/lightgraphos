@@ -1,5 +1,5 @@
 class GearsController < ApplicationController
-	before_action :signed_in_user
+	#before_action :signed_in_user
   before_action :correct_user,   only: :destroy
 
   def new
