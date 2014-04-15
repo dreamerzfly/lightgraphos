@@ -112,8 +112,8 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100px;
-  padding: 10px;
+  width: 400px;
+  padding: 12px;
   margin-bottom: 15px;
   color: black;
   font-size: 17px;
@@ -132,6 +132,13 @@ input {
   font-size: 17px;
   font-family: "ff-clan-web-pro-wide", sans-serif;
 }
+
+.btn-success{
+background-image: none;
+width: 100px;
+margin-left: 4px;
+}
+
 #error_explanation {
   color: #f00;
   ul {
@@ -226,7 +233,6 @@ aside {
   position: fixed;
 }
 
-
 .header-item li > a {
     text-decoration: none;
     text-shadow:none !important;
@@ -234,8 +240,12 @@ aside {
     margin-top: 20px;
     margin-bottom: 10px;
     z-index: 500;
+    text-decoration: none;
   }
 
+.nav >li>a:hover{
+  background-color: black;
+}
 #header .navbar-inner { 
   background-color: black;
   opacity: 0.8;
@@ -255,7 +265,7 @@ aside {
 .content {
   color: #333;
   font-size: 1.2em;
-  line-height: 2.0;
+  line-height: 1.0;
 }
 
 .content > header {
