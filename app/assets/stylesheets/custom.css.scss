@@ -300,22 +300,33 @@ aside {
 }
 
 .content > header .copy_container h1 {
-  font-size: 3.50em;
+  font-size: 3.40em;
   line-height: 65px;
-  padding-bottom: 15px;
 }
 
 .content > header .copy_container h4 {
   border-bottom: 3px solid #ccc;
-  margin-bottom: 18px;
   padding-bottom: 18px;
-  color: #FCFFFD;
+  color: #ee5f5b;
   font-size: 1.5em;
   font-family: 'Crete Round';
 }
 
+.content > header .copy_container h5 {
+  line-height: 1.5;
+}
+
 .content > header .container p {
   font-size: .9em;
+}
+
+.content > header .copy_container .btn {
+  padding: 5px 8px;
+  vertical-align: top;
+}
+
+.content > header .copy_container .alert {
+  padding: 0px 8px;
 }
 
 #about-area-home {
@@ -465,8 +476,10 @@ aside {
 }
 
 #visitor_email {
-  min-width: 400px;
+  min-width: 300px;
   margin-bottom: 0px;
+  padding: 0px 5px;
+  border-radius: 4px;
 }
 
 .add-padding-bottom {
