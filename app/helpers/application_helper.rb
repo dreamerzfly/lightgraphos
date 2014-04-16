@@ -9,7 +9,7 @@ module ApplicationHelper
     end
   end
 
-=begin
+
   #helper methods to use form_for througout app to call devise resources
   def resource_name
     :visitor
@@ -22,8 +22,9 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:visitor]
   end
-=end
+end
 
+=begin
   #helper methods to use form_for througout app to call devise resources
   def resource_name
     :user
@@ -36,4 +37,4 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
-end
+=end
