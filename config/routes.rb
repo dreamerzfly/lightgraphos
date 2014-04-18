@@ -2,7 +2,7 @@ Lightgraphos::Application.routes.draw do
   devise_for :users
   devise_for :visitors
   resources :users
-  resources :sessions, only: [:new, :create, :destroy] #remove this is to switch to user model only
+  #resources :sessions, only: [:new, :create, :destroy] #remove this is to switch to user model only
   resources :gears, only: [:new, :create, :destroy, :show]
   resources :searches
 

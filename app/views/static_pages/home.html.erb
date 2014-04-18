@@ -18,7 +18,7 @@
           <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
 
           <!--this is for getting email input and confirming email using devise-->
-          
+          <!--
           <%if flash[:suc]%>
             
             <div class="alert alert-info"><%= flash[:suc]%></div>
@@ -33,18 +33,15 @@
               <%= f.submit "Sign up", class: "btn btn-success"  %>
             <%end%>
           <% end %>
-        
-
-          <!--<p><%= link_to "Clyqe to Sign Up!", new_visitor_registration_path, :class => "btn btn-large btn-success"%> </p>-->
-
-          <!--
-          <div class="input-group">
-            <input type="text" class="form-control subscribe-bar" placeholder="Email Address">
-            <span class="input-group-btn">
-              <%= link_to "Sign up now!", signup_path, class: "btn btn-success" %>
-            </span>
-          </div>
           -->
+          <!--this is for getting email input and confirming email using devise-->
+
+          <!--this is for user model-->
+          <p><%= link_to "Login", new_user_session_path, class: "btn btn-large btn-success" %></p>
+          <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-success" %></p>
+          <!--this is for user model-->
+
+
         <% end%>
       </div>
   </div>
