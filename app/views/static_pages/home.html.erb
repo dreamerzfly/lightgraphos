@@ -15,10 +15,10 @@
           <h1>A PLACE FOR YOU TO</h1>
           <h4>list gear, rent gear, and learn from each other.</h4>  
           <p>Whether you are looking for a gear on your trip or you are looking to rent out your gear, ClyQe is here to connect photographers around the world.</p> 
-          <h5 class="add-padding">Currently, we are getting ready for a beta version. You can sign up below if you are interested in taking part. We'll keep you updated.</h5>
+          <h5 class="add-padding"></h5>
+          <p>The beta version of ClyQe is currently under construction. If you're interested in learning more and would like to participate as a beta tester, please sign up below.</p>
 
           <!--this is for getting email input and confirming email using devise-->
-          
           <%if flash[:suc]%>
             
             <div class="alert alert-info"><%= flash[:suc]%></div>
@@ -29,7 +29,7 @@
           <%else%>
             <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
               <%= devise_error_messages! %>
-              <%= f.text_field :email,:maxlength => 100, :placeholder => "Email Address" %>
+              <%= f.text_field :email,:maxlength => 50, :placeholder => "Email Address" %>
               <%= f.submit "Sign up", class: "btn btn-success"  %>
             <%end%>
           <% end %>
@@ -49,6 +49,7 @@
       </div>
   </div>
 </div>
+
 <div id="content-area-home" class="container"> 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
