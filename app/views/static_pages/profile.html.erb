@@ -1,0 +1,123 @@
+<% provide(:title, 'Profile') %>
+
+<div class="content">
+<header>
+	<div class="container">
+	<div class="row">	
+		<article class="col-lg-offset-1 col-sm-offset-1 col-lg-8 col-sm-7 col-lg-push-3 col-sm-push-4">
+	        <ul class="nav nav-tabs">
+	                <li><a href="#abt" data-toggle="tab">About</a></li>
+	                <li><a href="#gear" data-toggle="tab">Gears</a></li>
+	                <li><a href="#trns" data-toggle="tab">Transactions</a></li>
+	        </ul>
+			<!-- text for each callout -->           
+	    	<div class="tab-content">
+	        	 <!-- Owner About -->
+	            <div class="tab-pane fade active in" id="abt">
+		            <p>
+					Mark's story in Photography started when he spontaneously bought a DSLR while he was preparing for a trip. That day changed his life and wallet forever. The changes also caused him to acquire more lenses and more accessories. </p>
+		            <p><a href="#" class="btn btn-info">Read more >></a></p>
+		            <!--Reviews of Owners-->
+		            	<blockquote><p>Mark is super awesome!</p></blockquote>
+		        		<blockquote><p>He's ok...</p></blockquote>
+	            </div> <!--close about-->
+
+	             <!-- Owner Gears -->
+	            <div class="tab-pane fade" id="gear">
+	            	<div class="row">
+			            <div class="col-xs-6">
+	                        <div class="thumbnail alt="" img-responsive">
+	                        	<%= image_tag("profile/mark.png")%>
+	                           	<!--<img src="profile/mark.png" alt="" class="img-responsive">-->
+	                            <p class="caption">Canon Kit.</p>
+	                        </div>
+	                    </div>
+	                    <div class="col-xs-6">
+	                        <div class="thumbnail alt="" img-responsive">  
+	                            <%= image_tag("profile/mark.png")%>
+	                            <p class="caption">Nikon Kit.</p> 
+	                        </div>
+	                    </div>
+                	</div>
+	            </div> <!--close owner gears-->
+
+	             <!-- Owner Transactions -->
+	             <div class="tab-pane fade" id="trns">
+		             <div class="table-responsive">
+	              		<table class="table table-condensed table-striped">
+	                		<thead>
+			                  <tr>
+			                    <th>Transaction Number</th>
+			                    <th>Transaction Date</th>
+			                    <th>Price:</th>
+			                    <th>Renter:</th>
+			                  </tr>
+			                </thead>
+			                <tbody>
+			                  <tr>
+			                    <td>223445</td>
+			                    <td>2014-01-29</td>
+			                    <td>$35</td>
+			                    <td>Chevy Chase</td>
+			                  </tr>
+			                  <tr>
+			                    <td>998324</td>
+			                    <td>2014-03-29</td>
+			                    <td>$100</td>
+			                    <td>Melrose Black</td>
+			                  </tr>
+			                  <tr>
+			                    <td>3281345</td>
+			                    <td>2014-04-02</td>
+			                    <td>$76</td>
+			                    <td>Diane Richards</td>
+			                  </tr>
+			                </tbody>
+			            </table>
+	            	</div>
+		        </div>
+	    	</div> <!--close tab content -->
+    	</article>
+
+        <aside class="col-lg-3 col-sm-4 col-lg-pull-9 col-sm-pull-8">
+        	<div class="panel panel-default">
+            	<div  class="panel-heading">
+            		<span class="glyphicon glyphicon-star"></span>
+                	<div class="thumbnail alt="" img-responsive"> 
+          				<%= image_tag("profile/mark.png") %>
+        			</div>
+        			<h3>Mark</h3>
+                </div>
+                <div class="panel-body">
+	                <p>Buddies:</p>
+	                <p>Tiffanie</p>
+	                <p>Victor</p>
+                </div>
+            </div>
+         </aside>
+<!--
+    	<aside class="col-lg-3 col-sm-4 col-lg-pull-9 col-sm-pull-8">
+        <div class="thumbnail">
+          <%= image_tag("profile/mark.png") %>
+        </div>
+        	<h3>About Our Services</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Vaccinations</a></li>
+                <li><a href="#">Checkups</a></li>
+                <li><a href="#">Senior Pets</a></li>
+                <li><a href="#">Diet Plans</a></li>
+            </ul> 
+         </aside>
+-->
+	</div>
+</div>
+</div>
+	<script type="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="javascripts/bootstrap.min.js"></script>
+    <!--css selector-->
+    <script>
+        $(function () {
+            $('.nav-tabs a:first').tab('show');
+        });
+    </script>
+<!--<div class="container">-->
