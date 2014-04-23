@@ -112,8 +112,8 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 400px;
-  padding: 12px;
+  width: 100px;
+  padding: 10px;
   margin-bottom: 15px;
   color: black;
   font-size: 17px;
@@ -125,18 +125,12 @@ input {
   height: auto !important;
 }
 
-/* override anything manually, like rounded buttons */
+/* Override anything manually, like rounded buttons */
 .btn {
   padding: 10px 8px;
   color: #fff;
   font-size: 17px;
   font-family: "ff-clan-web-pro-wide", sans-serif;
-}
-
-.btn-success{
-background-image: none;
-width: 100px;
-margin-left: 4px;
 }
 
 #error_explanation {
@@ -233,6 +227,7 @@ aside {
   position: fixed;
 }
 
+
 .header-item li > a {
     text-decoration: none;
     text-shadow:none !important;
@@ -240,12 +235,8 @@ aside {
     margin-top: 20px;
     margin-bottom: 10px;
     z-index: 500;
-    text-decoration: none;
   }
 
-.nav >li>a:hover{
-  background-color: black;
-}
 #header .navbar-inner { 
   background-color: black;
   opacity: 0.8;
@@ -265,7 +256,7 @@ aside {
 .content {
   color: #333;
   font-size: 1.2em;
-  line-height: 1.0;
+  line-height: 2.0;
 }
 
 .content > header {
@@ -309,23 +300,33 @@ aside {
 }
 
 .content > header .copy_container h1 {
-  font-size: 3.50em;
+  font-size: 3.40em;
   line-height: 65px;
-  padding-bottom: 15px;
-  font-family: 'Crete Round';
-  }
+}
 
 .content > header .copy_container h4 {
   border-bottom: 3px solid #ccc;
-  margin-bottom: 18px;
   padding-bottom: 18px;
-  color: #FCFFFD;
+  color: #ee5f5b;
   font-size: 1.5em;
   font-family: 'Crete Round';
 }
 
+.content > header .copy_container h5 {
+  line-height: 1.5;
+}
+
 .content > header .container p {
   font-size: .9em;
+}
+
+.content > header .copy_container .btn {
+  padding: 5px 8px;
+  vertical-align: top;
+}
+
+.content > header .copy_container .alert {
+  padding: 0px 8px;
 }
 
 #about-area-home {
@@ -335,7 +336,10 @@ aside {
 }
 
 #content-area-home {
-  /*padding: 0px 20px 44px 80px;*/
+  /*padding: 0px 100px 40px 100px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10px;
   float: center;
   padding-top: 30px;
@@ -366,13 +370,13 @@ aside {
 #content-area-home .span4-gray {
   background: #F0F1F2;
   margin-left: 0px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 17px 10px 17px;
 }
 
 #content-area-home .span4-gray-2 {
   margin-left: 0px;
   background: #E3EFFF;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 17px 10px 17px;
 }
 
 #content-area-home .thumbnail {
@@ -472,9 +476,12 @@ aside {
 }
 
 #visitor_email {
-  min-width: 400px;
+  min-width: 300px;
   margin-bottom: 0px;
+  padding: 0px 5px;
+  border-radius: 4px;
 }
+
 .add-padding-bottom {
   padding-bottom: 40px;
 }
