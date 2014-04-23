@@ -478,3 +478,10 @@ aside {
 .add-padding-bottom {
   padding-bottom: 40px;
 }
+
+.tab-pane{
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  padding: 0.8em;
+}
