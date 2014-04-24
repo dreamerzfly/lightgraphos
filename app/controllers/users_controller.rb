@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
-  
+
   def show
   	@user = User.find(params[:id])
     @gears = @user.gears.paginate(page: params[:page]) 
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    logger.debug "user params is #{user_params}"
   	@user = User.new(user_params)
   	if @user.save
       UserMailer.welcome_email(@user).deliver
