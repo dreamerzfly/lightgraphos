@@ -5,6 +5,7 @@ Lightgraphos::Application.routes.draw do
   #resources :sessions, only: [:new, :create, :destroy] #remove this is to switch to user model only
   resources :gears, only: [:new, :create, :destroy, :show]
   resources :searches
+  resources :rentals, only: [ :new, :create ]
 
   #devise_scope :visitors do 
     #get '/signup' => 'devise/registrations#new'

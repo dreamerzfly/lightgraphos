@@ -1,2 +1,2 @@
 require 'balanced'
-Balanced.configure('AK7r0ZIqpSVv3Sk6UyGmzu0p')
+Balanced.configure('ak-test-qqsJQYx6dnSz4VBXFaWDlLaarAUCGs2s')
