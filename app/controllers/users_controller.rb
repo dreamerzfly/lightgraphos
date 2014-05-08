@@ -40,6 +40,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    UserMailer.cancel_email(@user).deliver
+    @user.destroy
+    flash[:success] = "User destroyed"
+    redirect_to home_path
+  end
+
   private
 
     def user_params

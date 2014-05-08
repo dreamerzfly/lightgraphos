@@ -10,8 +10,12 @@
   </aside>
   <!-- delete above and change span from 4 to 8 -->
   <div class="span8">
-      <h3>Gear List</h3>
-      <%= render 'shared/posts' %>
-    </div>
+    <h3>Gear List</h3>
+    <%= render 'shared/posts' %>
+  </div>
+
+  <div>
+    <%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %>
+  </div>
 
 </div>
