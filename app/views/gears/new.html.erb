@@ -1,28 +1,35 @@
 <% provide(:title, "Post Gear") %>
-<h1>Post Gear</h1>
+<div class="container fluid">
+<div id="pg-content" class="content" >
+    <div class="row">
+    <h1>Post Gear</h1>
+      <div class="span6 offset3">
+        <%= form_for(@gear, :html => {:multipart => true}) do |f| %>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@gear) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
 
-      <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+          <%= f.label :brand %>
+          <%= f.select :brand, [ "Canon", "Nikon", "Sigma", "Panasonic", "Leica", "Olympus", "Fujifilm", "Mamiya", "Minolta", "Bower", "GoPro", "Sanyo", "Ricoh", "Pentax", " Lytro" ], :prompt => 'Select Brand'%>
 
-      <%= f.label :brand %>
-      <%= f.select :brand, [ "Canon", "Nikon", "Sigma", "Panasonic", "Leica", "Olympus", "Fujifilm", "Mamiya", "Minolta", "Bower", "GoPro", "Sanyo", "Ricoh", "Pentax", " Lytro" ], :prompt => 'Select Brand'%>
+          <%= f.label :component %>
+          <%= f.select :component, [ "Body", "Lens", "Accessory" ], :prompt => 'Select Component' %>
 
-      <%= f.label :component %>
-      <%= f.select :component, [ "Body", "Lens", "Accessory" ], :prompt => 'Select Component' %>
+          <%= f.label :daily_rental_price %>
+          <%= f.text_field :daily_rental_price %>
 
-      <%= f.label :daily_rental_price %>
-      <%= f.text_field :daily_rental_price %>
+          <%= f.label :description %>
+          <%= f.text_field :description %>
 
-      <%= f.label :description %>
-      <%= f.text_field :description %>
+          <!--add photo of gear -->
+          <%= add_photo(f) %>
+          
+          <%= f.submit "Post gear now!", class: "btn btn-default btn-success" %>
+        <% end %>
 
-      <%= f.submit "Post gear now!", class: "btn btn-default btn-success" %>
-    <% end %>
-
+      </div>
+    </div>
   </div>
+</div>
 </div>
