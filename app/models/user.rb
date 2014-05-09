@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
 
   has_many :gears, dependent: :destroy
   before_save { self.email = email.downcase }
-  #before_create :create_remember_token
 
+  #paperclip
+  has_attached_file :profile_picture, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  validates_attachment_content_type :profile_picture, :content_type => /\Aimage\/.*\Z/
+
+  #before_create :create_remember_token
   # these are for validation when creating new user
   #validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

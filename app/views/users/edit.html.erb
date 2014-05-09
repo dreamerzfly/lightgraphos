@@ -1,22 +1,27 @@
 <% provide(:title, "Edit user") %>
 <h1>Update your profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
+<div class="container">
+  <div>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <div><%= f.label :name %><br />
+      <%= f.text_field :name, :style => "width:400px;"  %></div> 
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <div><%= f.label :email %><br />
+      <%= f.text_field :email, :style => "width:400px;"  %></div> 
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
-      <%= f.password_field :password_confirmation %>
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password, :style => "width:400px;"  %></div> 
+
+      <div><%= f.label :password_confirmation, "Confirm Password" %><br />
+      <%= f.password_field :password_confirmation, :style => "width:400px;"  %></div>       
+
+
+      <div><%= f.label :profile_picture %><br />
+      <%= f.file_field :profile_picture, :style => "width:400px;"  %></div> 
 
       <%= f.submit "Save changes", class: "btn btn-large btn-success" %>
     <% end %>

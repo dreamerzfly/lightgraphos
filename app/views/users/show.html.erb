@@ -15,7 +15,11 @@
   </div>
 
   <div>
-    <%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %>
+    <p><%= link_to "Update User Profile", edit_user_path(current_user), class: "btn btn-default btn-success" %></p>
+    <p><%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %></p>
   </div>
 
+  <div>
+    <%= image_tag @user.profile_picture.url(:medium) %>
+  </div>
 </div>
