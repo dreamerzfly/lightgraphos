@@ -1,0 +1,24 @@
+
+<div class="container">
+  <% provide(:title, 'Sign Up') %>
+  <h1>Rental</h1>
+
+  <div class="row">
+  <div class="span6 offset3">
+
+    <%= form_for :rental, url: rentals_path do |f| %>
+      <%= f.label :card_number %>
+      <%= f.text_field :card_number, :placeholder => "5105105105105100" %>
+
+      <%= f.label :expiration_month %>
+      <%= f.text_field :expiration_month, :placeholder => "12" %>
+
+      <%= f.label :expiration_year %>
+      <%= f.text_field :expiration_year, :placeholder => "2020" %>
+
+      <%= f.submit "Rent Gear", class: "btn btn-large btn-success" %>
+    <% end %>
+  </div>
+
+  </div>
+</div>

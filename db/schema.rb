@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329192735) do
+ActiveRecord::Schema.define(version: 20140507063321) do
 
   create_table "gears", force: true do |t|
     t.integer  "user_id"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20140329192735) do
   end
 
   add_index "gears", ["user_id"], name: "index_gears_on_user_id"
+
+  create_table "rentals", force: true do |t|
+    t.string   "debit_uri"
+    t.string   "credit_uri"
+    t.integer  "owner_id"
+    t.integer  "buyer_id"
+    t.integer  "gear_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "searches", force: true do |t|
     t.string   "title"
@@ -59,8 +69,10 @@ ActiveRecord::Schema.define(version: 20140329192735) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string   "customer_uri"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 

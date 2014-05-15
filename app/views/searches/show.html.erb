@@ -1,8 +1,9 @@
 
 <% provide(:title, "Search Results") %>
-<h1>Search Results</h1>
+<div class="jumbotron">
+	<h1>Search Results</h1>
 
+	<%= render @search.gears %>
 
-<%= render @search.gears %>
-
-<%= link_to "Search gear again", new_search_path, class: "btn btn-default btn-success" %>
+	<%= link_to "Search gear again", new_search_path, class: "btn btn-default btn-success" %>
+</div>

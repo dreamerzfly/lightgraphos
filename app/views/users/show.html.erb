@@ -10,7 +10,7 @@
             </div>
       <div class="panel panel-default">
         <div  class="panel-heading">
-            <h4><%= @user.email%></h4>
+            <h4><%= @user.name%></h4>
             </div>
         <div class="panel-body">
           <p>Buddies:</p>
@@ -119,3 +119,9 @@
         });
     </script>
 <!--<div class="container">-->
+<!--
+    <%= link_to "Post gear", postgear_path, class: "btn btn-default btn-success" %>
+    <h3>Gear List</h3>
+    <%= render 'shared/posts' %>
+    <%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %>
+  -->
