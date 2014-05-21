@@ -1,7 +1,8 @@
-<div id="pg-content">
+<% provide(:title, "Sign Up") %>
+<div class="container fluid">
+<div id="pg-content" class="content" >
     <div class="row"> 
-      <h2>Sign up</h2>
-
+      <h1>Sign Up </h1>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
@@ -22,4 +23,5 @@
 
       <%= render "devise/shared/links" %>
   </div>
+</div>
 </div>

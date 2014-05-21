@@ -7,23 +7,24 @@
         <%= form_for(@gear, :html => {:multipart => true}) do |f| %>
 
           <%= render 'shared/error_messages', object: f.object %>
-          <%= f.label :title %>
-          <%= f.text_field :title %>
+          <div><%= f.label :title %><br />
+          <%= f.text_field :title %></div>
 
-          <%= f.label :brand %>
-          <%= f.select :brand, [ "Canon", "Nikon", "Sigma", "Panasonic", "Leica", "Olympus", "Fujifilm", "Mamiya", "Minolta", "Bower", "GoPro", "Sanyo", "Ricoh", "Pentax", " Lytro" ], :prompt => 'Select Brand'%>
+          <div><%= f.label :brand %><br />
+          <%= f.select :brand, [ "Canon", "Nikon", "Sigma", "Panasonic", "Leica", "Olympus", "Fujifilm", "Mamiya", "Minolta", "Bower", "GoPro", "Sanyo", "Ricoh", "Pentax", " Lytro" ], :prompt => 'Select Brand'%></div>
 
-          <%= f.label :component %>
-          <%= f.select :component, [ "Body", "Lens", "Accessory" ], :prompt => 'Select Component' %>
+          <div><%= f.label :component %><br />
+          <%= f.select :component, [ "Body", "Lens", "Accessory" ], :prompt => 'Select Component' %></div>
 
-          <%= f.label :daily_rental_price %>
-          <%= f.text_field :daily_rental_price %>
+          <div><%= f.label :daily_rental_price %><br />
+          <%= f.text_field :daily_rental_price %></div>
 
-          <%= f.label :description %>
-          <%= f.text_field :description %>
+          <div><%= f.label :description %><br />
+          <%= f.text_field :description %></div>
 
           <!--add photo of gear -->
-          <%= add_photo(f) %>
+          <div><%= f.label :gear_picture %><br />
+          <%= f.file_field :gear_picture, :style => "width:400px;"  %></div> 
           
           <%= f.submit "Post gear now!", class: "btn btn-default btn-success" %>
         <% end %>

@@ -1,16 +1,16 @@
 <% provide(:title, 'Profile') %>
 
-<div id="pg-content">
+<div id="pg-content" class="content">
     <div class="row"> 
-
     <div class="col-lg-3 col-sm-4">
-      <span class="glyphicon glyphicon-star"></span>
+      
       <div class="thumbnail alt=""img-responsive"> 
-                  <%= image_tag @user.profile_picture.url(:medium) %>
+                  <%= image_tag("profile/mark.png") %>
             </div>
+      <span class="glyphicon glyphicon-star"></span>
       <div class="panel panel-default">
         <div  class="panel-heading">
-            <h4><%= @user.name%></h4>
+            <h4><%= @user.email%></h4>
             </div>
         <div class="panel-body">
           <p>Buddies:</p>
@@ -63,10 +63,11 @@
                     <table class="table table-condensed table-striped">
                       <thead>
                         <tr>
-                          <th>Transaction Number</th>
-                          <th>Transaction Date</th>
-                          <th>Price:</th>
-                          <th>Renter:</th>
+                          <th>Transaction</th>
+                          <th>Date</th>
+                          <th>Price</th>
+                          <th>Renter</th>
+                          <th>Status</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -75,18 +76,35 @@
                           <td>2014-01-29</td>
                           <td>$35</td>
                           <td>Chevy Chase</td>
+                          <td>Completed</td>
                         </tr>
                         <tr>
                           <td>998324</td>
                           <td>2014-03-29</td>
                           <td>$100</td>
                           <td>Melrose Black</td>
+                          <td>Declined</td>
                         </tr>
                         <tr>
                           <td>3281345</td>
                           <td>2014-04-02</td>
                           <td>$76</td>
                           <td>Diane Richards</td>
+                          <td>Received</td>
+                        </tr>
+                        <tr>
+                          <td>3281346</td>
+                          <td>2014-04-15</td>
+                          <td>$55</td>
+                          <td>Dr. Watson</td>
+                          <td>Returned</td>
+                        </tr>
+                        <tr>
+                          <td>3281347</td>
+                          <td>2014-04-15</td>
+                          <td>$250</td>
+                          <td>Tony Morrison</td>
+                          <td>Accepted</td>
                         </tr>
                       </tbody>
                   </table>
@@ -94,22 +112,15 @@
             </div>
         </div> <!--close tab content -->
       </div>
-<!--
-      <aside class="col-lg-3 col-sm-4 col-lg-pull-9 col-sm-pull-8">
-        <div class="thumbnail">
-          <%= image_tag("profile/mark.png") %>
-        </div>
-          <h3>About Our Services</h3>
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">Vaccinations</a></li>
-                <li><a href="#">Checkups</a></li>
-                <li><a href="#">Senior Pets</a></li>
-                <li><a href="#">Diet Plans</a></li>
-            </ul> 
-         </aside>
-  -->
   </div>
+<div class="row">
+    <p><%= link_to "Update User Profile", edit_user_path(current_user), class: "btn btn-default btn-success" %></p>
+    <p><%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %></p>
+    <p><%= link_to "Post gear", postgear_path, class: "btn btn-large btn-success" %></p>
 </div>
+</div> <!--close content-pg -->
+
+
   <script type="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="javascripts/bootstrap.min.js"></script>
     <!--css selector-->
@@ -119,13 +130,3 @@
         });
     </script>
 <!--<div class="container">-->
-<!--
-    <%= link_to "Post gear", postgear_path, class: "btn btn-default btn-success" %>
-    <h3>Gear List</h3>
-    <%= render 'shared/posts' %>
-    <%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %>
-  -->
-  <div>
-    <p><%= link_to "Update User Profile", edit_user_path(current_user), class: "btn btn-default btn-success" %></p>
-    <p><%= link_to "Cancel your account", @user, method: :delete, confirm: "You sure?", class: "btn btn-default btn-success" %></p>
-  </div>

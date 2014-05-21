@@ -1,8 +1,8 @@
 <% provide(:title, "Edit user") %>
+<div id="pg-content" class="content">
+    <div class="row">
+      
 <h1>Update your profile</h1>
-
-<div class="container">
-  <div>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 

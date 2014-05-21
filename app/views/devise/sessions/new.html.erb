@@ -1,8 +1,9 @@
+<% provide(:title, "Sign In") %>
 <div class="container fluid">
 <div id="pg-content" class="content" >
     <div class="row"> 
 
-		<h2>Sign in</h2>
+		<h2>Sign in</h2> 
 
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 		<div><%= f.label :email %><br />
